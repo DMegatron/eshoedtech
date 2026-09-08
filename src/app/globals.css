@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-grotesk), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* ESHO EduTech sky blue (#42c2f5 primary) */
+  --color-skyblue-50: #f2faff;
+  --color-skyblue-100: #e1f4fe;
+  --color-skyblue-200: #c0e9fd;
+  --color-skyblue-300: #8fd8fb;
+  --color-skyblue-400: #5cc9f7;
+  --color-skyblue-500: #42c2f5;
+  --color-skyblue-600: #28aae2;
+  --color-skyblue-700: #1d8cc1;
+  --color-skyblue-800: #1a6f99;
+  --color-skyblue-900: #164f6f;
+
+  /* Deep navy — headings & footer */
+  --color-navy-100: #d6e4f0;
+  --color-navy-300: #7d9ab8;
+  --color-navy-500: #33506e;
+  --color-navy-600: #243f5c;
+  --color-navy-700: #173455;
+  --color-navy-800: #102a47;
+  --color-navy-900: #0b2038;
+
+  --color-muted: #5b6b7f; /* subtle grey body text */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white font-sans text-slate-600 antialiased;
+}
+
+::selection {
+  background: #42c2f5;
+  color: #ffffff;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+@layer components {
+  .container-max {
+    @apply mx-auto w-full max-w-[1280px] px-4 sm:px-8 lg:px-10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-skyblue-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-skyblue-500/25 transition-all duration-200 hover:-translate-y-0.5 hover:bg-skyblue-600 hover:shadow-lg hover:shadow-skyblue-500/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-skyblue-400 focus-visible:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-navy-800 transition-all duration-200 hover:-translate-y-0.5 hover:border-skyblue-400 hover:text-skyblue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-skyblue-400;
+  }
+
+  .btn-lg {
+    @apply px-6 py-3 text-sm sm:px-7 sm:py-3.5 sm:text-base;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-skyblue-600;
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply inline-block h-px w-8 bg-skyblue-500;
+  }
+
+  /* Clean white info card */
+  .card {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow duration-300;
+  }
+
+  .card-hover {
+    @apply hover:border-skyblue-300 hover:shadow-lg hover:shadow-skyblue-500/10;
+  }
+
+  .bg-grid-light {
+    background-image:
+      linear-gradient(to right, rgb(34 130 180 / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(34 130 180 / 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
