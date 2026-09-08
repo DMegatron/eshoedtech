@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "print-owner": "node scripts/print-owner.js"
   },
   "dependencies": {
     "framer-motion": "^13.1.1",
