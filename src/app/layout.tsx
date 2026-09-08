@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { ConsoleNotice } from "@/components/console-notice";
 import "./globals.css";
 
 const grotesk = Space_Grotesk({
@@ -32,7 +33,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${grotesk.variable} ${inter.variable} h-full antialiased`}>
-      <body className="min-h-full bg-white font-sans text-slate-600">{children}</body>
+      <body className="min-h-full bg-white font-sans text-slate-600">
+        <ConsoleNotice />
+        {children}
+      </body>
     </html>
   );
 }
