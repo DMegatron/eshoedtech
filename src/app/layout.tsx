@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { ConsoleNotice } from "@/components/console-notice";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const grotesk = Space_Grotesk({
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full bg-white font-sans text-slate-600">
         <ConsoleNotice />
         {children}
+        <Analytics />
       </body>
     </html>
   );
