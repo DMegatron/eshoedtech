@@ -5,7 +5,7 @@ export const site = {
   location: "Sector V, Kolkata",
   phone: "+91 90000 00000",
   phoneHref: "tel:+919000000000",
-  email: "admissions@eshoedtech.com",
+  email: "admissions@eshoedutech.com",
   address: ["Esho EduTech", "Sector V, Kolkata, West Bengal"],
   copyright: `© ${new Date().getFullYear()} Esho EduTech. All Rights Reserved.`,
 };
